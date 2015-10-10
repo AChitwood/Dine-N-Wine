@@ -10,4 +10,12 @@
     <string name="EmailBox">Email</string>
     <string name="PasswordBox">Password</string>
     <!--                -->
+
+    <string name="title_activity_sign__up">Sign_Up</string>
+
+    <!-- Sign up Strings-->
+    <string name="SignUpMessage">Ready to begin\ndining?</string>
+    <string name="EmailBox">Email</string>
+    <string name="PasswordBox">Password</string>
+    <!--                -->
 </resources>
