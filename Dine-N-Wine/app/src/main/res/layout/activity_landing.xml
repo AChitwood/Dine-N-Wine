@@ -121,7 +121,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Login"/>
+            android:text="Login"
+            android:onClick="checkLogin"/>
 
 
 
@@ -208,7 +209,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Sign Up"/>
+            android:text="Sign Up"
+            android:onClick="checkSignUp"/>
 
 
 
