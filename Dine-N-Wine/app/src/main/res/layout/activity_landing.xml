@@ -8,30 +8,58 @@
 
 
     <ImageView
+        android:id="@+id/landingimage"
         android:src="@drawable/landing_page"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:scaleType="centerCrop"/>
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:text="Welcome \nto \nCakeBytes"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_weight="1">
+        android:orientation="horizontal">
 
         <Button
             android:text="Login"
+            android:background="@drawable/button_border"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="15dp"
             android:layout_width="0dp"
+            android:fontFamily="sans-serif-light"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="login"/>
 
         <Button
             android:text="Sign-Up"
+            android:background="@drawable/button_border"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="7dp"
             android:layout_width="0dp"
+            android:fontFamily="sans-serif-light"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="signUp"/>
 
     </LinearLayout>
 
