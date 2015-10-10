@@ -16,13 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity
             android:name=".Sign_Up"
             android:label="@string/title_activity_sign__up"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-=======
+
 
         <activity android:name=".LoginActivity"
             android:parentActivityName=".LandingActivity">
@@ -31,7 +30,6 @@
                 android:value=".LandingActivity" />
         </activity>
 
->>>>>>> origin/master
     </application>
 
 </manifest>

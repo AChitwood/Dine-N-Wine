@@ -18,11 +18,13 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
 
 
     TextView textView;
-    LinearLayout linearLayout;
-    RelativeLayout loginLayout;
+    LinearLayout linearLayout; //Buttons on the start screen (Login, signup)
+    RelativeLayout loginLayout, signupLayout;
     //--------------------------------
-    Animation animationSlideLeft;
-    Animation animationSlideRight;
+    Animation animationSlideLeft; //Welcome offscreen for login
+    Animation animationSlideRight; //Login
+    Animation animationSlideLeftS; //Signup
+    Animation animationSlideExit; //Welcome offscreen for signup
     //---------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +36,15 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
         linearLayout = (LinearLayout)findViewById(R.id.buttons);
         loginLayout = (RelativeLayout)findViewById(R.id.loginlayout);
         loginLayout.setVisibility(View.INVISIBLE);
+        signupLayout = (RelativeLayout)findViewById(R.id.signuplayout);
+        signupLayout.setVisibility(View.INVISIBLE);
         //-----------------------------------
         animationSlideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_leave);
         animationSlideLeft.setAnimationListener(this);
-        animationSlideRight = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_left_edge_enter);
+        animationSlideRight = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_enter);
+        animationSlideLeftS = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.animation_enter_right);
+        animationSlideExit = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.animation_leave_right);
+        animationSlideExit.setAnimationListener(this);
         //------------------------------------
     }
 
@@ -45,14 +52,17 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
 
         textView.startAnimation(animationSlideLeft);
         linearLayout.startAnimation(animationSlideLeft);
+        loginLayout.setVisibility(View.VISIBLE);
+        loginLayout.startAnimation(animationSlideRight);
 
-
-        //Intent i = new Intent(this, LoginActivity.class);
-        //startActivity(i);
-        //this.overridePendingTransition(R.anim.animation_enter, R.anim.animation_leave);
     }
 
     public void signUp(View view) {
+
+        textView.startAnimation(animationSlideExit);
+        linearLayout.startAnimation(animationSlideExit);
+        signupLayout.setVisibility(View.VISIBLE);
+        signupLayout.startAnimation(animationSlideLeftS);
 
     }
 
@@ -64,12 +74,8 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
     @Override
     public void onAnimationEnd(Animation animation) {
 
-        if(animation == animationSlideLeft) {
             textView.setVisibility(View.INVISIBLE);
             linearLayout.setVisibility(View.INVISIBLE);
-            loginLayout.setVisibility(View.VISIBLE);
-            loginLayout.startAnimation(animationSlideRight);
-        }
     }
 
     @Override
