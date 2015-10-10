@@ -8,21 +8,25 @@
 
 
     <ImageView
+        android:id="@+id/landingimage"
         android:src="@drawable/landing_page"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
 
     <TextView
-        android:text="Welcome \nto \nWine-N-Dine"
+        android:id="@+id/welcomeText"
+        android:text="Welcome \nto \nCakeBytes"
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"/>
 
     <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="50dp"
@@ -33,15 +37,16 @@
             android:text="Login"
             android:background="@drawable/button_border"
             android:textAllCaps="false"
-            android:padding="10dp"
             android:textSize="25sp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_marginRight="7dp"
             android:layout_marginLeft="15dp"
             android:layout_width="0dp"
+            android:fontFamily="sans-serif-light"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="login"/>
 
         <Button
             android:text="Sign-Up"
@@ -53,8 +58,10 @@
             android:layout_marginRight="15dp"
             android:layout_marginLeft="7dp"
             android:layout_width="0dp"
+            android:fontFamily="sans-serif-light"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="signUp"/>
 
     </LinearLayout>
 
@@ -66,5 +73,51 @@
         android:layout_alignParentTop="true"
         android:onClick="homepage"/>
 
+    <RelativeLayout
+        android:id="@+id/loginlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="Email"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/button_border_black"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/button_border_black"/>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignTop="@id/password"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Login"/>
+
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
