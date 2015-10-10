@@ -15,6 +15,14 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
 
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="Skip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="homepage"/>
+
     <TextView
         android:id="@+id/welcomeText"
         android:text="Welcome \nto \nCakeBytes"
@@ -87,7 +95,6 @@
         <EditText
             android:id="@+id/password"
             android:inputType="textPassword"
-
             android:layout_marginTop="10dp"
             android:layout_marginBottom="16dp"
             android:layout_alignRight="@+id/email"
@@ -206,6 +213,5 @@
 
 
     </RelativeLayout>
-
 
 </RelativeLayout>

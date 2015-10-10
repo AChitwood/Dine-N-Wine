@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Dine-N-Wine</string>
+
+    <string name="title_activity_homepage">Homepage</string>
+
     <string name="title_activity_sign__up">Sign_Up</string>
 
     <!-- Sign up Strings-->
@@ -7,4 +10,5 @@
     <string name="EmailBox">Email</string>
     <string name="PasswordBox">Password</string>
     <!--                -->
+
 </resources>

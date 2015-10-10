@@ -14,7 +14,21 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import android.content.Intent;
+import android.view.View;
+import android.widget.EditText;
+
+import android.transition.Slide;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 public class LandingActivity extends AppCompatActivity implements Animation.AnimationListener{
+
+    public final static String EXTRA_MESSAGE = "com.dine_n_wineinc.dine_n_wine.MESSAGE";
 
 
     TextView textView;
@@ -82,4 +96,19 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
     public void onAnimationRepeat(Animation animation) {
 
     }
+
+    /** Called when the user clicks the Send button */
+
+    public void homepage(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, Homepage.class);
+        //EditText editText = (EditText) findViewById(R.id.edit_message);
+        //String message = editText.getText().toString();
+
+        String message = "Aloha!";
+
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
 }
