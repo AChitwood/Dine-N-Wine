@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dine_n_wineinc.dine_n_wine" >
 
+    <uses-sdk android:minSdkVersion="11" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +23,7 @@
             android:name=".Homepage"
             android:label="@string/title_activity_homepage"
             android:parentActivityName=".LandingActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dine_n_wineinc.dine_n_wine.LandingActivity" />
