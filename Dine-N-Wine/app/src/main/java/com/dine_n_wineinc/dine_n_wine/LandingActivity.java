@@ -88,8 +88,10 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
     @Override
     public void onAnimationEnd(Animation animation) {
 
-            textView.setVisibility(View.INVISIBLE);
-            linearLayout.setVisibility(View.INVISIBLE);
+            if((signupLayout.getVisibility() == View.VISIBLE) || (loginLayout.getVisibility() == View.VISIBLE)) {
+                textView.setVisibility(View.INVISIBLE);
+                linearLayout.setVisibility(View.INVISIBLE);
+            }
     }
 
     @Override
@@ -109,6 +111,29 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
 
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(signupLayout.getVisibility() == View.VISIBLE) {
+            signupLayout.startAnimation(animationSlideLeft);
+            signupLayout.setVisibility(View.INVISIBLE);
+            textView.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.VISIBLE);
+            textView.startAnimation(animationSlideRight);
+            linearLayout.startAnimation(animationSlideRight);
+        }
+        else if(loginLayout.getVisibility() == View.VISIBLE) {
+            loginLayout.startAnimation(animationSlideExit);
+            loginLayout.setVisibility(View.INVISIBLE);
+            textView.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.VISIBLE);
+            textView.startAnimation(animationSlideLeftS);
+            linearLayout.startAnimation(animationSlideLeftS);
+        }
+        else {
+            System.exit(1);
+        }
     }
 
 }
