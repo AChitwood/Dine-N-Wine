@@ -32,6 +32,4 @@ public class Homepage extends AppCompatActivity {
         setContentView(textView);
 
     }
-
-
 }
