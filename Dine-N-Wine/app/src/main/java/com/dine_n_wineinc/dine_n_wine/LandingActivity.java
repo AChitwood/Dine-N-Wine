@@ -108,10 +108,10 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
         Intent intent = new Intent(this, Homepage.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
-
+        /*
         String message = "Aloha!";
 
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_MESSAGE, message); */
         startActivity(intent);
     }
 
