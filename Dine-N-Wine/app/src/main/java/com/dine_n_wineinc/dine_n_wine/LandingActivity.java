@@ -105,7 +105,7 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
 
     public void homepage(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, Homepage.class);
+        Intent intent = new Intent(this, ProfilePage.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         /*

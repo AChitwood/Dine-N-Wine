@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#E6E6E6"
     tools:context="com.dine_n_wineinc.dine_n_wine.ProfilePage">
 
     <ImageView
@@ -9,7 +10,7 @@
         android:layout_height="215dp"
         android:src="@drawable/placeholderhouse"
         android:scaleType="centerCrop"
-        android:id="@+id/HousePicture"/>
+        android:id="@+id/HousePicture" />
     <ImageView
         android:layout_width="120dp"
         android:layout_height="125dp"
