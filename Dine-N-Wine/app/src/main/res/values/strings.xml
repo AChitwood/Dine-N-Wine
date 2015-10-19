@@ -8,7 +8,7 @@
     <string name="LoginButton">Login</string>
     <string name="SignupButton">Sign Up</string>
 
-    <!-- Sign up Strings-->
+    <!-- Sign up Strings -->
     <string name="SignUpMessage">Ready to begin\ndining?</string>
     <string name="EmailBox">Email</string>
     <string name="PasswordBox">Password</string>
@@ -16,6 +16,11 @@
     <string name="LastNameBox">Last Name</string>
     <string name="title_activity_profile_page">ProfilePage</string>
     <string name="action_settings">Settings</string>
-    <!--                -->
+    <!-- End Sign Up Strings -->
 
+
+    <!-- Profile Page Strings -->
+    <string name="RecentButtonString">Recent</string>
+    <string name="InfoButtonString">Info</string>
+    <!-- End Profile Page Strings-->
 </resources>
