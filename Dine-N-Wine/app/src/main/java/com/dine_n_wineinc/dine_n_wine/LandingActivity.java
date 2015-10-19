@@ -3,27 +3,13 @@ package com.dine_n_wineinc.dine_n_wine;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.transition.Slide;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import android.content.Intent;
-import android.view.View;
 import android.widget.EditText;
-
-import android.transition.Slide;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -146,7 +132,7 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
         loginPassword = loginPasswordEditText.getText().toString();
         String usps = loginEmail + " " + loginPassword;
         if(loginPassword.compareTo("") != 0 || loginEmail.compareTo("") != 0){
-            Intent intent = new Intent(this, Homepage.class);
+            Intent intent = new Intent(this, HomepageActivity.class);
             intent.putExtra(EXTRA_MESSAGE, usps);
             startActivity(intent);
             finish();
@@ -184,7 +170,7 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
 
         String usps = SUEmail + " " + SUPassword + " " + SUFN + " " + SULN;
         if(SUPassword.compareTo("") != 0 || SUEmail.compareTo("") != 0 || SUFN.compareTo("") != 0 || SULN.compareTo("") != 0){
-            final Intent intent = new Intent(this, Homepage.class);
+            final Intent intent = new Intent(this, HomepageActivity.class);
             new AlertDialog.Builder(this)
                     .setTitle("Account Created")
                     .setMessage("Account Creation Successful.")
