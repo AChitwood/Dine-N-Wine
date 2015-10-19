@@ -16,17 +16,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Homepage"
-            android:label="@string/title_activity_homepage" >
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.categor.DEFAULT"/>
-            </intent-filter>
-            -->
-        </activity>
-        <activity
             android:name=".ProfilePage"
             android:label="@string/title_activity_profile_page" >
         </activity>
