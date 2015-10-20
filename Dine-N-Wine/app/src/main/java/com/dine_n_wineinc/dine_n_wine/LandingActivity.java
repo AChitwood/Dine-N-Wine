@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 public class LandingActivity extends AppCompatActivity implements Animation.AnimationListener{
 
     public final static String EXTRA_MESSAGE = "com.dine_n_wineinc.dine_n_wine.MESSAGE";
+    public final static String EXTRA_FIRSTNAME = "com.dine_n_wineinc.dine_n_wine.FIRSTNAME";
+    public final static String EXTRA_LASTNAME = "com.dine_n_wineinc.dine_n_wine.LASTNAME";
 
 
     TextView textView;
@@ -168,9 +171,10 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
         SUFN = SUFNEditText.getText().toString();
         SULN = SULNEditText.getText().toString();
 
-        String usps = SUEmail + " " + SUPassword + " " + SUFN + " " + SULN;
+        String firstName = SUFN + " ";
+        String lastName = SULN;
         if(SUPassword.compareTo("") != 0 || SUEmail.compareTo("") != 0 || SUFN.compareTo("") != 0 || SULN.compareTo("") != 0){
-            final Intent intent = new Intent(this, HomepageActivity.class);
+            final Intent intent = new Intent(this, ProfilePage.class);
             new AlertDialog.Builder(this)
                     .setTitle("Account Created")
                     .setMessage("Account Creation Successful.")
@@ -187,7 +191,8 @@ public class LandingActivity extends AppCompatActivity implements Animation.Anim
                     })*/
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-            intent.putExtra(EXTRA_MESSAGE, usps);
+            intent.putExtra(EXTRA_FIRSTNAME, firstName);
+            intent.putExtra(EXTRA_LASTNAME, lastName);
             startActivity(intent);
             finish();
         }
