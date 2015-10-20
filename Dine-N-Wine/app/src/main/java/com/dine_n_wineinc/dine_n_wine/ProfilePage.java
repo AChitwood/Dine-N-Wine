@@ -1,6 +1,7 @@
 package com.dine_n_wineinc.dine_n_wine;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.MotionEvent;
@@ -9,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProfilePage extends Activity implements Animation.AnimationListener{
@@ -20,6 +22,8 @@ public class ProfilePage extends Activity implements Animation.AnimationListener
     Animation profilePictureEnterAnim;
     ImageView profilePicture;
     ImageView housePicture;
+    TextView firstName;
+    TextView lastName;
     Button infoButton;
     Button recentButton;
     int swipeCounter = 0;
@@ -27,6 +31,12 @@ public class ProfilePage extends Activity implements Animation.AnimationListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+        //object initilization
+        Intent intent = getIntent();
+        String firstNameString = intent.getStringExtra(LandingActivity.EXTRA_FIRSTNAME);
+        String lastNameString = intent.getStringExtra(LandingActivity.EXTRA_LASTNAME);
+
+
         //layout object initilizations
         profilePicture = (ImageView)findViewById(R.id.ProfilePicture);
         housePicture = (ImageView)findViewById(R.id.HousePicture);
@@ -34,6 +44,10 @@ public class ProfilePage extends Activity implements Animation.AnimationListener
         recentButton = (Button)findViewById(R.id.RecentButton);
         BUTTON_ACTIVE_COLOR = getResources().getColor(R.color.buttonActive);
         BUTTON_INACTIVE_COLOR = getResources().getColor(R.color.buttonInactive);
+        firstName = (TextView)findViewById(R.id.ProfilePageFirstName);
+        lastName = (TextView)findViewById(R.id.ProfilePageLastName);
+
+
         //animation initilizations
         //profile picture goes from default position to off screen
         profilePictureExitAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.profilepictureexit);
@@ -49,7 +63,7 @@ public class ProfilePage extends Activity implements Animation.AnimationListener
             }
 
             public void onSwipeRight() {
-                if(swipeCounter > 0)
+                if (swipeCounter > 0)
                     swipeCounter--;
                 if (profilePicture.getVisibility() == View.INVISIBLE && swipeCounter == 0)
                     profilePicture.startAnimation(profilePictureEnterAnim);
@@ -67,6 +81,11 @@ public class ProfilePage extends Activity implements Animation.AnimationListener
 
 
         });
+        if(firstNameString != null && lastNameString != null){
+            firstName.setText(firstNameString);
+            lastName.setText(lastNameString);
+        }
+
     }
     public void showRecent(View view){
         recentButton.setBackgroundColor(BUTTON_ACTIVE_COLOR);

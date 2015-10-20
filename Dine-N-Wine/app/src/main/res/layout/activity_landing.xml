@@ -82,6 +82,7 @@
         <EditText
             android:id="@+id/email"
             android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_centerHorizontal="true"
@@ -96,6 +97,7 @@
         <EditText
             android:id="@+id/password"
             android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_alignEnd="@+id/email"
@@ -143,6 +145,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
+            android:textColor="@android:color/black"
             android:layout_marginTop="60dp"
             android:background="@drawable/button_border_black"
             android:fontFamily="sans-serif-light"
@@ -161,6 +164,7 @@
             android:layout_below="@+id/firstname"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
             android:background="@drawable/button_border_black"
             android:fontFamily="sans-serif-light"
             android:hint="@string/LastNameBox"
@@ -180,6 +184,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_border_black"
             android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
             android:hint="@string/EmailBox"
             android:inputType="textEmailAddress" />
 
@@ -197,6 +202,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_border_black"
             android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
             android:hint="@string/PasswordBox"
             android:inputType="textPassword" />
 

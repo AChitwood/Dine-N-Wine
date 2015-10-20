@@ -22,5 +22,7 @@
     <!-- Profile Page Strings -->
     <string name="RecentButtonString">Recent</string>
     <string name="InfoButtonString">Info</string>
+    <string name="FirstNameString">"First "</string>
+    <string name="LastNameString"> Last</string>
     <!-- End Profile Page Strings-->
 </resources>
