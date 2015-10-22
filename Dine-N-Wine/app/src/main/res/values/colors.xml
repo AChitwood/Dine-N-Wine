@@ -6,4 +6,7 @@
     <color name="primary_text_material_dark">#000000</color>
     <color name="windowBackground">#ffffff</color>
     <color name="background_material_dark">#ffffff</color>
+    <color name="buttonActive">#E6E6E6</color>
+    <color name="buttonInactive">#CFCFCF</color>
+    <color name="starColor">#FFFF19</color>
 </resources>
