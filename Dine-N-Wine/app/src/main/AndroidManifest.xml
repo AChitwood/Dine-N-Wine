@@ -26,9 +26,11 @@
             android:name=".ProfilePage"
             android:label="@string/title_activity_profile_page" >
         </activity>
+
+        <!-- IMPORTANT!!! I changed the label to an empty string for cosmetic reasons, but this is the HOMEPAGE ACTIVITY -->
         <activity
             android:name=".HomepageActivity"
-            android:label="@string/title_activity_homepage"
+            android:label=""
             android:theme="@style/HomepageTheme"
             android:parentActivityName=".LandingActivity" >
             <meta-data

@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#dc7423</color>
+    <color name="colorPrimaryHomepage">@android:color/darker_gray</color>
     <color name="colorAccent">#ffffff</color>
     <color name="primary_text_material_dark">#000000</color>
     <color name="windowBackground">#ffffff</color>
@@ -9,4 +10,5 @@
     <color name="buttonActive">#E6E6E6</color>
     <color name="buttonInactive">#CFCFCF</color>
     <color name="starColor">#FFFF19</color>
+    <color name="colorAccentHomepage">#cfd8dc</color>
 </resources>

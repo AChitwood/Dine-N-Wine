@@ -21,11 +21,18 @@
     <!-- Use for the Homepage -->
     <style name="HomepageTheme" parent="Theme.AppCompat">
         <item name="actionBarStyle">@style/MyActionBarStyle</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryHomepage</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:colorBackground">@color/colorAccentHomepage</item>
     </style>
 
     <style name="MyActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:icon">@android:color/transparent</item>
         <item name="icon">@android:color/transparent</item>
+
     </style>
 
 

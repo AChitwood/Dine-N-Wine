@@ -11,6 +11,7 @@ tools:context="com.dine_n_wineinc.dine_n_wine.HomepageActivity">
 
     <TextView
         android:text="Search Page"
+        android:textColor="#000000"
         android:textSize="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -11,6 +11,14 @@
         android:title="Search"
         android:icon="@drawable/search_icon" />
 
+    <!-- Messages -->
+    <item
+        android:id="@+id/action_messages"
+        android:orderInCategory="6"
+        app:showAsAction="always"
+        android:title="Messages"
+        android:icon="@drawable/messages_icon" />
+
 
     <!-- Settings -->
     <item
