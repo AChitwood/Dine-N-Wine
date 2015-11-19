@@ -60,3 +60,6 @@ h4{
   width:100%;
   text-align:center;
 }
+tr.spaceUnderRow > td {
+  padding-bottom: 1em;
+}
