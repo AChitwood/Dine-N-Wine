@@ -1,0 +1,62 @@
+a {
+   color: white !important;
+   font-family: 'Lato';
+}
+
+h1 {
+  font-family: 'Lato';
+}
+
+h4{
+  font-family: 'Lato';
+}
+
+.carousel {
+  height: 700px;
+  margin: 0px auto;
+}
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
+.carousel .active.left {left:0;opacity:0;z-index:2;}
+.carousel .next {left:0;opacity:1;z-index:1;}
+
+.carousel-1 {
+  height: 100%;
+  background: url(../img/carousel-img-1-CROPPED.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-2 {
+  height: 100%;
+  background: url(../img/carousel-img-2-CROPPED.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-3 {
+  height: 100%;
+  background: url(../img/carousel-img-3-CROPPED.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-4 {
+  height: 100%;
+  background: url(../img/carousel-img-4-CROPPED.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.overlay { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:20%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
