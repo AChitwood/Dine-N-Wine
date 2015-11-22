@@ -1,5 +1,5 @@
 a {
-   color: white !important;
+   color: #000 !important;
    font-family: 'Lato';
 }
 
@@ -11,10 +11,21 @@ h4{
   font-family: 'Lato';
 }
 
+.item {
+  transition-property: opacity;
+}
+
 .carousel {
   height: 700px;
   margin: 0px auto;
 }
+
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-width: 0px;
+}
+
 .carousel-inner {
   height: 100%;
 }
@@ -60,6 +71,7 @@ h4{
   width:100%;
   text-align:center;
 }
+
 tr.spaceUnderRow > td {
   padding-bottom: 1em;
 }
